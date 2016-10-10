@@ -31,9 +31,9 @@ module.exports = {
   	encryptedPassword:{
   		type:'string'
   	}
-// preventing to show passwords to clients
+ //preventing to show passwords to clients
   	//toJSON: function(){
-  // var obj=this.toObject();
+   //var obj=this.toObject();
    //delete obj.password;
    //delete obj.confirmation;
    //delete obj.encryptedPassword;
