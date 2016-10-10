@@ -36,6 +36,31 @@ module.exports = function(grunt) {
   }
 
 
+  var jsFilesToInject =[
+'linker/js/socket.io.js',
+
+    // then beef it up with some convenience logic for talking to Sails.js
+    'linker/js/sails.io.js',
+
+    // A simpler boilerplate library for getting you up and running w/ an
+    // automatic listener for incoming messages from Socket.io.
+    'linker/js/app.js',
+
+
+    // *->    put other dependencies here   <-*
+
+
+    'linker/js/jquery.js',
+    'linker/js/jquery.validate.min.js',
+
+    // All of the rest of your app scripts imported here
+    'linker/**/*.js'
+  ];
+
+
+
+
+
   /**
    * Loads Grunt configuration modules from the specified
    * relative path. These modules should export a function
@@ -80,3 +105,4 @@ module.exports = function(grunt) {
   invokeConfigFn(registerDefinitions);
 
 };
+  
